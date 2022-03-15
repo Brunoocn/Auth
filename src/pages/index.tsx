@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <>
+    <img src="/logo.svg" alt="logo" className={styles.logo} />
     <img src="/vector-l.svg" alt="bubble" className={styles.bubble_left} />
     <img src="/vector-r.svg" alt="bubble" className={styles.bubble_right} />
       <h1 className={styles.title}>Sign In</h1>
