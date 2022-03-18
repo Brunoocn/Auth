@@ -2,6 +2,8 @@
 import { FormEvent, useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { withSSRGuest } from "../utils/withSSRGuest";
+import { InputForm } from "../components/InputForm";
+import { Background } from "../components/Background";
 import styles from "./Home.module.scss";
 import toast from "react-hot-toast";
 
@@ -28,20 +30,17 @@ export default function Home() {
   }
 
   return (
-    <>
-      <img src="/logo.svg" alt="logo" className={styles.logo} />
-      <img src="/vector-l.svg" alt="bubble" className={styles.bubble_left} />
-      <img src="/vector-r.svg" alt="bubble" className={styles.bubble_right} />
+    <> 
+      <Background />
       <h1 className={styles.title}>Sign In</h1>
       <form onSubmit={handleSubmit} className={styles.container}>
-        <input
+        <InputForm
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
-
-        <input
+        <InputForm
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
