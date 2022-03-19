@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/public/images/github.png" width="100%"/>
+  <img src="/public/img/github.png" width="100%"/>
 </h1>
 
 ## ✨ Technologies
