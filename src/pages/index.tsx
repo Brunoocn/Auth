@@ -6,6 +6,7 @@ import { InputForm } from "../components/InputForm";
 import { Background } from "../components/Background";
 import styles from "./Home.module.scss";
 import toast from "react-hot-toast";
+import { Title } from "../components/Title";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -30,9 +31,9 @@ export default function Home() {
   }
 
   return (
-    <> 
+    <>
       <Background />
-      <h1 className={styles.title}>Sign In</h1>
+      <Title>Sign In</Title>
       <form onSubmit={handleSubmit} className={styles.container}>
         <InputForm
           type="email"
@@ -48,7 +49,7 @@ export default function Home() {
         />
 
         <button type="submit" onClick={validateForm}>
-          Entrar
+          Sign In
         </button>
       </form>
     </>
